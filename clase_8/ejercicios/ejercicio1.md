@@ -25,6 +25,7 @@ El script sigue una secuencia lógica de tres pasos principales:
 ![alt text](imagenes/1-prompt-sync.png)
 
 Propósito: Esta línea importa e inicializa el módulo prompt-sync.
+
 Detalle: 
 
     La función require('prompt-sync') carga el módulo, y el () al final lo instancia, permitiendo que la variable prompt se use como una función para capturar la entrada del usuario.
@@ -34,6 +35,7 @@ Detalle:
 ![alt text](imagenes/2-entrada.png)
 
 Propósito: Se pide al usuario que ingrese un número.
+
 Detalle: 
     
     prompt('Ingrese un número: '): Muestra el mensaje "Ingrese un número: " en la consola y espera a que el usuario escriba algo y presione Enter.
@@ -50,6 +52,7 @@ Detalle:
 ![alt text](imagenes/3-calculo.png)
 
 Propósito: Se calcula el doble del número ingresado.
+
 Detalle:
 
     numero * 2: Se utiliza el operador aritmético de multiplicación (*) para multiplicar el valor almacenado en la variable numero por 2.
@@ -61,6 +64,7 @@ Detalle:
 ![alt text](imagenes/4-visualizacion.png)
 
 Propósito: Se muestra el resultado del cálculo en la consola.
+
 Detalle:
 
     console.log(): Es la función estándar en JavaScript para imprimir mensajes en la consola.
