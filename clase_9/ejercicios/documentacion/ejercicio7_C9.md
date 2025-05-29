@@ -22,13 +22,19 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 1️⃣ **Inicialización de `prompt-sync`**
 
-<!-- ![Diagrama de la inicialización de prompt-sync](../imagenes/kglbs-1-prompt-sync.png) -->
+    ```js
+    const prompt = require('prompt-sync')();
+    ```
+
 *   **Propósito**: Importa e inicializa el módulo `prompt-sync`.
 *   **Detalle**: `const prompt = require('prompt-sync')();`
 
 2️⃣ **Solicitud del Peso en Kilogramos**
 
-<!-- ![Captura de pantalla de la solicitud del peso en kg al usuario](../imagenes/kglbs-2-entrada.png) -->
+    ```js
+    let pesoKg = parseFloat(prompt("Introduce el peso en kilogramos: "));
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese un peso en kilogramos.
 *   **Detalle**:
     *   `let pesoKg = parseFloat(prompt("Introduce el peso en kilogramos: "));`
@@ -38,7 +44,10 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 3️⃣ **Conversión a Libras**
 
-<!-- ![Ilustración del cálculo de conversión de kg a libras](../imagenes/kglbs-3-calculo.png) -->
+    ```js
+    let pesoLibras = pesoKg * 2.20462;
+    ```
+
 *   **Propósito**: Se calcula el peso equivalente en libras.
 *   **Detalle**:
     *   `let pesoLibras = pesoKg * 2.20462;`
@@ -47,7 +56,10 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 4️⃣ **Visualización del Resultado**
 
-<!-- ![Muestra de la visualización del peso en kg y su conversión a libras en consola](../imagenes/kglbs-4-visualizacion.png) -->
+    ```js
+    console.log(`${pesoKg} kg son ${pesoLibras.toFixed(2)} libras.`);
+    ```
+
 *   **Propósito**: Se muestra el peso original y el convertido en la consola.
 *   **Detalle**:
     *   `console.log(\`${pesoKg} kg son ${pesoLibras.toFixed(2)} libras.\`);`
@@ -64,7 +76,6 @@ Para ejecutar este script:
 3.  Abre una terminal y navega al directorio del archivo.
 4.  Ejecuta con el comando:
 
-    <!-- ![Comando de ejecución del script convertirPeso.js en la terminal](../imagenes/kglbs-5-ejecucion.png) -->
     ```bash
     node convertirPeso.js
     ```

@@ -12,9 +12,9 @@ Para ejecutar este código en un entorno **Node.js**, es necesario contar con el
 
 Si no tienes instalado `prompt-sync`, puedes añadirlo a tu proyecto ejecutando el siguiente comando en tu terminal:
 
-```bash
-npm install prompt-sync
-```
+    ```bash
+    npm install prompt-sync
+    ```
 
 ## Funcionamiento del Código
 
@@ -22,13 +22,21 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 1️⃣ **Inicialización de `prompt-sync`**
 
-<!-- ![Diagrama de la inicialización de prompt-sync](../imagenes/mayortres-1-prompt-sync.png) -->
+    ```js
+    const prompt = require('prompt-sync')();
+    ```
+
 *   **Propósito**: Importa e inicializa el módulo `prompt-sync`.
 *   **Detalle**: `const prompt = require('prompt-sync')();`
 
 2️⃣ **Solicitud de los Tres Números**
 
-<!-- ![Captura de pantalla de la solicitud de los tres números al usuario](../imagenes/mayortres-2-entradas.png) -->
+    ```js
+    let num1 = parseFloat(prompt("Introduce el primer número: "));
+    let num2 = parseFloat(prompt("Introduce el segundo número: "));
+    let num3 = parseFloat(prompt("Introduce el tercer número: "));
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese tres números.
 *   **Detalle**:
     *   `let num1 = parseFloat(prompt("Introduce el primer número: "));`
@@ -38,7 +46,18 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 3️⃣ **Determinación del Número Mayor (o Igualdad)**
 
-<!-- ![Diagrama de flujo de la estructura condicional para encontrar el mayor de tres números](../imagenes/mayortres-3-comparacion.png) -->
+   ```js
+    if (num1 > num2 && num1 > num3) {
+        console.log(`El primer número: ${num1} es el mayor.`);
+    } else if (num2 > num1 && num2 > num3) {
+        console.log(`El segundo número: ${num2} es el mayor.`);    
+    } else if (num3 > num1 && num3 > num2) {
+        console.log(`El tercer número: ${num3} es el mayor.`); 
+    } else if (num1 === num2 && num2 === num3 ) {
+        console.log("Los tres números son iguales.");
+    }
+    ```
+
 *   **Propósito**: Se utiliza una estructura `if-else if-else` para comparar los números y encontrar el mayor, o determinar si son todos iguales.
 *   **Detalle**:
     *   `if (num1 > num2 && num1 > num3)`:
@@ -53,7 +72,6 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 4️⃣ **Visualización del Resultado**
 
-<!-- ![Muestra de la visualización del resultado (número mayor o igualdad) en consola](../imagenes/mayortres-4-visualizacion.png) -->
 *   **Propósito**: Se muestra en la consola el resultado de la determinación.
 *   **Detalle**:
     *   Dependiendo de la condición que se cumpla, se utiliza `console.log()` con plantillas de cadena:
@@ -71,7 +89,6 @@ Para ejecutar este script:
 3.  Abre una terminal y navega al directorio del archivo.
 4.  Ejecuta con el comando:
 
-    <!-- ![Comando de ejecución del script mayorDeTres.js en la terminal](../imagenes/mayortres-5-ejecucion.png) -->
     ```bash
     node mayorDeTres.js
     ```

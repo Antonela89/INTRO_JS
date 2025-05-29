@@ -12,9 +12,9 @@ Para ejecutar este código en un entorno **Node.js**, es necesario contar con el
 
 Si no tienes instalado `prompt-sync`, puedes añadirlo a tu proyecto ejecutando el siguiente comando en tu terminal:
 
-```bash
-npm install prompt-sync
-```
+    ```bash
+    npm install prompt-sync
+    ```
 
 ## Funcionamiento del Código
 
@@ -22,13 +22,19 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 1️⃣ **Inicialización de `prompt-sync`**
 
-<!-- ![Diagrama de la inicialización de prompt-sync](../imagenes/circulo-1-prompt-sync.png) -->
+    ```js
+    const prompt = require('prompt-sync')();
+    ```
+
 *   **Propósito**: Importa e inicializa el módulo `prompt-sync`.
 *   **Detalle**: `const prompt = require('prompt-sync')();`
 
 2️⃣ **Definición de la Constante PI**
+    
+    ```js
+    const PI = 3.14159;
+    ```
 
-<!-- ![Definición de la constante PI](../imagenes/circulo-2-constante-pi.png) -->
 *   **Propósito**: Se establece el valor de la constante matemática PI.
 *   **Detalle**:
     *   `const PI = 3.14159;`
@@ -36,7 +42,10 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 3️⃣ **Solicitud del Radio del Círculo**
 
-<!-- ![Captura de pantalla de la solicitud del radio del círculo al usuario](../imagenes/circulo-3-entrada-radio.png) -->
+    ```js
+    let radio = parseFloat(prompt("Introduce el radio del círculo: "));
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese el radio del círculo.
 *   **Detalle**:
     *   `let radio = parseFloat(prompt("Introduce el radio del círculo: "));`
@@ -46,7 +55,11 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 4️⃣ **Cálculo del Área y Perímetro**
 
-<!-- ![Ilustración de las fórmulas y cálculo del área y perímetro del círculo](../imagenes/circulo-4-calculos.png) -->
+    ```js
+    let area = PI*(radio**2);
+    let perimetro = 2*PI*radio;
+    ```
+
 *   **Propósito**: Se calculan el área y el perímetro del círculo utilizando las fórmulas matemáticas correspondientes.
 *   **Detalle**:
     *   **Área**: `let area = PI * (radio ** 2);`
@@ -58,7 +71,12 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 5️⃣ **Visualización de los Resultados**
 
-<!-- ![Muestra de la visualización del área y perímetro calculados en consola](../imagenes/circulo-5-visualizacion.png) -->
+    ```js
+    console.log(`Para un círculo de radio: ${radio}:
+    - El área del círculo es: ${area}
+    - El perímetro del círculo es: ${perimetro}`);
+    ```
+
 *   **Propósito**: Se muestran el área y el perímetro calculados en la consola.
 *   **Detalle**:
     *   `console.log(\`Para un círculo de radio: ${radio}: ...\`);`
@@ -76,7 +94,6 @@ Para ejecutar este script:
 3.  Abre una terminal y navega al directorio del archivo.
 4.  Ejecuta con el comando:
 
-    <!-- ![Comando de ejecución del script calculosCirculo.js en la terminal](../imagenes/circulo-6-ejecucion.png) -->
     ```bash
     node calculosCirculo.js
     ```

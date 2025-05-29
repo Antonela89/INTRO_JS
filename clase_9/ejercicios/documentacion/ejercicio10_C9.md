@@ -12,9 +12,9 @@ Para ejecutar este código en un entorno **Node.js**, es necesario contar con el
 
 Si no tienes instalado `prompt-sync`, puedes añadirlo a tu proyecto ejecutando el siguiente comando en tu terminal:
 
-```bash
-npm install prompt-sync
-```
+    ```bash
+    npm install prompt-sync
+    ```
 
 ## Funcionamiento del Código
 
@@ -22,13 +22,19 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 1️⃣ **Inicialización de `prompt-sync`**
 
-<!-- ![Diagrama de la inicialización de prompt-sync](../imagenes/diasemana-1-prompt-sync.png) -->
+    ```js
+    const prompt = require('prompt-sync')();
+    ```
+
 *   **Propósito**: Importa e inicializa el módulo `prompt-sync`.
 *   **Detalle**: `const prompt = require('prompt-sync')();`
 
 2️⃣ **Solicitud del Número del Día**
 
-<!-- ![Captura de pantalla de la solicitud de un número del 1 al 7 al usuario](../imagenes/diasemana-2-entrada.png) -->
+    ```js
+    let numero = parseInt(prompt("Introduce un número del 1 al 7: "));
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese un número que representará un día de la semana.
 *   **Detalle**:
     *   `let numero = parseInt(prompt("Introduce un número del 1 al 7: "));`
@@ -38,7 +44,26 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 3️⃣ **Determinación del Día de la Semana o Error**
 
-<!-- ![Diagrama de flujo de la estructura if-else if para determinar el día de la semana](../imagenes/diasemana-3-determinacion.png) -->
+    ```js
+    if (numero === 1) {
+        console.log("Lunes");
+    } else if (numero === 2) {
+        console.log("Martes");
+    } else if (numero === 3) {
+        console.log("Miércoles");
+    } else if (numero === 4) {
+        console.log("Jueves");
+    } else if (numero === 5) {
+        console.log("Viernes");
+    } else if (numero === 6) {
+        console.log("Sábado");
+    } else if (numero === 7) {
+        console.log("Domingo");
+    } else {
+        console.log("Error: El número debe estar entre 1 y 7.");
+    }
+    ```
+
 *   **Propósito**: Se utiliza una cadena de `if-else if-else` para mapear el número al día de la semana o identificar una entrada inválida.
 *   **Detalle**:
     *   `if (numero === 1)`: Si el número es 1, se imprime "Lunes".
@@ -49,7 +74,6 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 4️⃣ **Visualización del Resultado**
 
-<!-- ![Muestra de la visualización del día de la semana o mensaje de error en consola](../imagenes/diasemana-4-visualizacion.png) -->
 *   **Propósito**: Se muestra el día de la semana correspondiente o un mensaje de error en la consola.
 *   **Detalle**:
     *   Cada bloque `if` o `else if` que coincide ejecuta un `console.log()` con el nombre del día.
@@ -64,7 +88,6 @@ Para ejecutar este script:
 3.  Abre una terminal y navega al directorio del archivo.
 4.  Ejecuta con el comando:
 
-    <!-- ![Comando de ejecución del script diaSemana.js en la terminal](../imagenes/diasemana-5-ejecucion.png) -->
     ```bash
     node diaSemana.js
     ```

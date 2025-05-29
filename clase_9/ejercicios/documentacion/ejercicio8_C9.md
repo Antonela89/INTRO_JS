@@ -12,9 +12,9 @@ Para ejecutar este código en un entorno **Node.js**, es necesario contar con el
 
 Si no tienes instalado `prompt-sync`, puedes añadirlo a tu proyecto ejecutando el siguiente comando en tu terminal:
 
-```bash
-npm install prompt-sync
-```
+    ```bash
+    npm install prompt-sync
+    ```
 
 ## Funcionamiento del Código
 
@@ -22,13 +22,21 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 1️⃣ **Inicialización de `prompt-sync`**
 
-<!-- ![Diagrama de la inicialización de prompt-sync](../imagenes/triangulo-1-prompt-sync.png) -->
+    ```js
+    const prompt = require('prompt-sync')();
+    ```
+
 *   **Propósito**: Importa e inicializa el módulo `prompt-sync`.
 *   **Detalle**: `const prompt = require('prompt-sync')();`
 
 2️⃣ **Solicitud de las Longitudes de los Lados**
 
-<!-- ![Captura de pantalla de la solicitud de las longitudes de los tres lados del triángulo](../imagenes/triangulo-2-entradas.png) -->
+    ```js
+    let lado1 = parseFloat(prompt("Introduce la longitud del primer lado: "));
+    let lado2 = parseFloat(prompt("Introduce la longitud del segundo lado: "));
+    let lado3 = parseFloat(prompt("Introduce la longitud del tercer lado: "));
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese la longitud de cada uno de los tres lados del triángulo.
 *   **Detalle**:
     *   `let lado1 = parseFloat(prompt("Introduce la longitud del primer lado: "));`
@@ -38,7 +46,16 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 3️⃣ **Determinación del Tipo de Triángulo**
 
-<!-- ![Diagrama de flujo de la estructura condicional para determinar el tipo de triángulo](../imagenes/triangulo-3-determinacion.png) -->
+    ```js
+    if (lado1 === lado2 && lado2 === lado3) {
+        console.log("El triángulo es equilátero.");
+    } else if (lado1 === lado2 || lado2 === lado3 || lado1 === lado3) {
+        console.log("El triángulo es isósceles.");
+    } else  {
+        console.log("El triángulo es escaleno.");
+    }
+    ```
+
 *   **Propósito**: Se utiliza una estructura `if-else if-else` para clasificar el triángulo.
 *   **Detalle**:
     *   `if (lado1 === lado2 && lado2 === lado3)`:
@@ -51,7 +68,6 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 4️⃣ **Visualización del Resultado**
 
-<!-- ![Muestra de la visualización del tipo de triángulo determinado en consola](../imagenes/triangulo-4-visualizacion.png) -->
 *   **Propósito**: Se muestra el tipo de triángulo en la consola.
 *   **Detalle**:
     *   Dependiendo de la condición cumplida:
@@ -68,7 +84,6 @@ Para ejecutar este script:
 3.  Abre una terminal y navega al directorio del archivo.
 4.  Ejecuta con el comando:
 
-    <!-- ![Comando de ejecución del script tipoTriangulo.js en la terminal](../imagenes/triangulo-5-ejecucion.png) -->
     ```bash
     node tipoTriangulo.js
     ```

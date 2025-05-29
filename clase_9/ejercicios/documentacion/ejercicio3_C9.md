@@ -22,14 +22,20 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 1️⃣ **Inicialización de `prompt-sync`**
 
-<!-- ![Diagrama de la inicialización de prompt-sync](../imagenes/bool-1-prompt-sync.png) -->
+    ```js
+    const prompt = require('prompt-sync')();
+    ```
+
 *   **Propósito**: Esta línea importa e inicializa el módulo `prompt-sync`.
 *   **Detalle**:
     *   `const prompt = require('prompt-sync')();`
 
 2️⃣ **Solicitud del Primer Valor Booleano**
 
-<!-- ![Captura de pantalla de la solicitud del primer valor booleano](../imagenes/bool-2-entrada1.png) -->
+    ```js
+    let condicion1 = prompt("Introduce el primer valor booleano (true/false): ").toLowerCase() === 'true';
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese el primer valor booleano.
 *   **Detalle**:
     *   `let condicion1 = prompt("Introduce el primer valor booleano (true/false): ").toLowerCase() === 'true';`
@@ -39,7 +45,10 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 3️⃣ **Solicitud del Segundo Valor Booleano**
 
-<!-- ![Captura de pantalla de la solicitud del segundo valor booleano](../imagenes/bool-3-entrada2.png) -->
+    ```js
+    let condicion2 = prompt("Introduce el segundo valor booleano (true/false): ").toLowerCase() === 'true';
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese el segundo valor booleano.
 *   **Detalle**:
     *   `let condicion2 = prompt("Introduce el segundo valor booleano (true/false): ").toLowerCase() === 'true';`
@@ -47,7 +56,17 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 4️⃣ **Cálculo y Visualización de Combinaciones Lógicas**
 
-<!-- ![Muestra de las combinaciones lógicas calculadas y mostradas en consola](../imagenes/bool-4-visualizacion.png) -->
+    ```js
+    console.log(`Combinaciones de las condiciones
+    ${condicion1} && ${condicion2} = ${condicion1 && condicion2}
+    ${condicion1} || ${condicion2} = ${condicion1 && condicion2}
+    !${condicion1} = ${!condicion1}
+    !${condicion2} = ${!condicion2}
+    !(${condicion1} && ${condicion2}) = ${!(condicion1 && condicion2)}
+    !(${condicion1} || ${condicion2}) = ${!(condicion1 || condicion2)}
+    `);
+    ```
+
 *   **Propósito**: Se calculan y muestran varias operaciones lógicas utilizando los valores booleanos `condicion1` y `condicion2`.
 *   **Detalle**:
     *   `console.log(\`Combinaciones de las condiciones ... \`);`
@@ -70,10 +89,10 @@ Para ejecutar este script:
 4.  Navega hasta el directorio donde guardaste el archivo.
 5.  Ejecuta el script con el comando:
 
-    <!-- ![Comando de ejecución del script combinacionesBooleanas.js en la terminal](../imagenes/bool-5-ejecucion.png) -->
     ```bash
     node combinacionesBooleanas.js
     ```
+
 6.  El programa te solicitará que ingreses "true" o "false" para cada condición. Escríbelos y presiona Enter.
 7.  Verás las diferentes combinaciones lógicas impresas en la consola.
 

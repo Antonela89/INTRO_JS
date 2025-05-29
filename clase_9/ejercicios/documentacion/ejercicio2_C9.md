@@ -12,9 +12,9 @@ Para ejecutar este código en un entorno **Node.js**, es necesario contar con el
 
 Si no tienes instalado `prompt-sync`, puedes añadirlo a tu proyecto ejecutando el siguiente comando en tu terminal:
 
-```bash
-npm install prompt-sync
-```
+    ```bash
+    npm install prompt-sync
+    ```
 
 ## Funcionamiento del Código
 
@@ -22,14 +22,21 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 1️⃣ **Inicialización de `prompt-sync`**
 
-<!-- ![Diagrama de la inicialización de prompt-sync](../imagenes/rango-1-prompt-sync.png) -->
+    ```js
+    const prompt = require('prompt-sync')();
+    ```
+
 *   **Propósito**: Esta línea importa e inicializa el módulo `prompt-sync`.
 *   **Detalle**:
     *   `const prompt = require('prompt-sync')();`
 
 2️⃣ **Definición de Constantes de Rango**
 
-<!-- ![Definición de las constantes RANGO_MINIMO y RANGO_MAXIMO](../imagenes/rango-2-constantes.png) -->
+    ```js
+    const RANGO_MINIMO = 1;
+    const RANGO_MAXIMO = 10;
+    ```
+
 *   **Propósito**: Se establecen los límites inferior y superior del rango.
 *   **Detalle**:
     *   `const RANGO_MINIMO = 1;`
@@ -38,7 +45,10 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 3️⃣ **Solicitud de Entrada del Usuario**
 
-<!-- ![Captura de pantalla de la solicitud de un número entero al usuario](../imagenes/rango-3-entrada.png) -->
+     ```js
+    const numero = parseInt(prompt('Introduce un número entero: '));
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese un número entero.
 *   **Detalle**:
     *   `const numero = parseInt(prompt('Introduce un número entero: '));`
@@ -48,7 +58,14 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 4️⃣ **Verificación del Rango**
 
-<!-- ![Diagrama de flujo de la condición para verificar si el número está en el rango](../imagenes/rango-4-verificacion.png) -->
+    ```js
+    if (numero > RANGO_MINIMO && numero < RANGO_MAXIMO) {
+        console.log('El número ingresado está dentro del rango definido.');
+    } else {
+        console.log('El número ingresado NO ESTÁ dentro del rango definido.')
+    }
+    ```
+
 *   **Propósito**: Se comprueba si el número ingresado está dentro del rango definido (mayor que `RANGO_MINIMO` y menor que `RANGO_MAXIMO`).
 *   **Detalle**:
     *   `if (numero > RANGO_MINIMO && numero < RANGO_MAXIMO)`:
@@ -60,7 +77,6 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 5️⃣ **Visualización del Resultado**
 
-<!-- ![Muestra de la visualización del resultado de la verificación del rango en consola](../imagenes/rango-5-visualizacion.png) -->
 *   **Propósito**: Se muestra un mensaje en la consola indicando si el número está o no dentro del rango.
 *   **Detalle**:
     *   Si el número está en el rango:
@@ -78,10 +94,10 @@ Para ejecutar este script:
 4.  Navega hasta el directorio donde guardaste el archivo.
 5.  Ejecuta el script con el comando:
 
-    <!-- ![Comando de ejecución del script verificarRango.js en la terminal](../imagenes/rango-6-ejecucion.png) -->
     ```bash
     node verificarRango.js
     ```
+    
 6.  El programa te solicitará que ingreses un número entero. Escríbelo y presiona Enter.
 7.  Verás el mensaje correspondiente impreso en la consola.
 

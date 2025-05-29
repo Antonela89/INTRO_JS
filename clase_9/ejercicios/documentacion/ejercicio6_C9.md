@@ -22,13 +22,18 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 1️⃣ **Inicialización de `prompt-sync`**
 
-<!-- ![Diagrama de la inicialización de prompt-sync](../imagenes/edad-1-prompt-sync.png) -->
+    ```js
+    const prompt = require('prompt-sync')();
+    ```
+
 *   **Propósito**: Importa e inicializa el módulo `prompt-sync`.
 *   **Detalle**: `const prompt = require('prompt-sync')();`
 
 2️⃣ **Solicitud de la Edad del Usuario**
 
-<!-- ![Captura de pantalla de la solicitud de la edad al usuario](../imagenes/edad-2-entrada.png) -->
+    ```js
+        let edad = parseInt(prompt("Introduce tu edad: "));
+    ```
 *   **Propósito**: Se pide al usuario que ingrese su edad.
 *   **Detalle**:
     *   `let edad = parseInt(prompt("Introduce tu edad: "));`
@@ -38,7 +43,14 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 3️⃣ **Verificación de la Mayoría de Edad**
 
-<!-- ![Diagrama de flujo de la condición para verificar la mayoría de edad](../imagenes/edad-3-verificacion.png) -->
+    ```js
+    if (edad >= 18) {
+        console.log("Eres mayor de edad.");
+    } else {
+        console.log("Eres menor de edad.");
+    }
+    ```
+
 *   **Propósito**: Se comprueba si la edad ingresada es mayor o igual a 18.
 *   **Detalle**:
     *   `if (edad >= 18)`:
@@ -48,7 +60,6 @@ El script sigue una secuencia lógica de cuatro pasos principales:
 
 4️⃣ **Visualización del Resultado**
 
-<!-- ![Muestra de la visualización del resultado (mayor o menor de edad) en consola](../imagenes/edad-4-visualizacion.png) -->
 *   **Propósito**: Se muestra un mensaje en la consola indicando si el usuario es mayor o menor de edad.
 *   **Detalle**:
     *   Si es mayor de edad:
@@ -64,8 +75,7 @@ Para ejecutar este script:
 2.  Asegúrate de tener Node.js instalado.
 3.  Abre una terminal y navega al directorio del archivo.
 4.  Ejecuta con el comando:
-<!-- 
-    ![Comando de ejecución del script verificarEdad.js en la terminal](../imagenes/edad-5-ejecucion.png) -->
+
     ```bash
     node verificarEdad.js
     ```

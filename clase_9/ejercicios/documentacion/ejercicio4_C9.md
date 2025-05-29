@@ -22,14 +22,20 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 1️⃣ **Inicialización de `prompt-sync`**
 
-<!-- ![Diagrama de la inicialización de prompt-sync](../imagenes/nombre-1-prompt-sync.png) -->
+    ```js
+    const prompt = require('prompt-sync')();
+    ```
+
 *   **Propósito**: Esta línea importa e inicializa el módulo `prompt-sync`.
 *   **Detalle**:
     *   `const prompt = require('prompt-sync')();`
 
 2️⃣ **Definición del Nombre de Referencia**
 
-<!-- ![Definición de la constante miNombre](../imagenes/nombre-2-constante.png) -->
+    ```js
+    const miNombre = "antonela"; 
+    ```
+
 *   **Propósito**: Se establece el nombre con el cual se comparará la entrada del usuario.
 *   **Detalle**:
     *   `const miNombre = "antonela";`
@@ -37,7 +43,10 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 3️⃣ **Solicitud del Nombre del Usuario**
 
-<!-- ![Captura de pantalla de la solicitud del nombre al usuario](../imagenes/nombre-3-entrada.png) -->
+    ```js
+    let nombre = prompt("Por favor, introduce tu nombre: ").toLowerCase();
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese su nombre.
 *   **Detalle**:
     *   `let nombre = prompt("Por favor, introduce tu nombre: ").toLowerCase();`
@@ -47,7 +56,14 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 4️⃣ **Comparación de Nombres**
 
-<!-- ![Diagrama de flujo de la condición para comparar los nombres](../imagenes/nombre-4-comparacion.png) -->
+    ```js
+    if (nombre === miNombre) { 
+        console.log("¡Hola, tocayo, tu nombre es igual al mío! ¡Qué bueno verte!");
+    } else {
+        console.log("¡Lamentablemente, tu nombre no es igual al mío!");
+    }
+    ```
+
 *   **Propósito**: Se compara el nombre ingresado por el usuario con el nombre de referencia.
 *   **Detalle**:
     *   `if (nombre === miNombre)`:
@@ -57,7 +73,6 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 5️⃣ **Visualización del Resultado**
 
-<!-- ![Muestra de la visualización del mensaje personalizado en consola](../imagenes/nombre-5-visualizacion.png) -->
 *   **Propósito**: Se muestra un mensaje en la consola basado en el resultado de la comparación.
 *   **Detalle**:
     *   Si los nombres coinciden:
@@ -75,7 +90,6 @@ Para ejecutar este script:
 4.  Navega hasta el directorio donde guardaste el archivo.
 5.  Ejecuta el script con el comando:
 
-    <!-- ![Comando de ejecución del script compararNombre.js en la terminal](../imagenes/nombre-6-ejecucion.png) -->
     ```bash
     node compararNombre.js
     ```
