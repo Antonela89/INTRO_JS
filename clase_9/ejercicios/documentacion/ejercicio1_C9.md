@@ -12,9 +12,9 @@ Para ejecutar este código en un entorno **Node.js**, es necesario contar con el
 
 Si no tienes instalado `prompt-sync`, puedes añadirlo a tu proyecto ejecutando el siguiente comando en tu terminal:
 
-```bash
-npm install prompt-sync
-```
+    ```bash
+    npm install prompt-sync
+    ```
 
 ## Funcionamiento del Código
 
@@ -22,7 +22,9 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 1️⃣ **Inicialización de `prompt-sync`**
 
-![]
+    ```js
+    const prompt = require('prompt-sync')();
+    ```
 
 *   **Propósito**: Esta línea importa e inicializa el módulo `prompt-sync`.
 *   **Detalle**:
@@ -32,7 +34,10 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 2️⃣ **Solicitud del Primer Número**
 
-<!-- ![Captura de pantalla de la solicitud del primer número al usuario](../imagenes/compnum-2-entrada1.png) -->
+    ```js
+    let numero1 = parseFloat(prompt("Ingrese el primer número:"));
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese el primer número.
 *   **Detalle**:
     *   `let numero1 = parseFloat(prompt("Ingrese el primer número:"));`
@@ -42,7 +47,10 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 3️⃣ **Solicitud del Segundo Número**
 
-<!-- ![Captura de pantalla de la solicitud del segundo número al usuario](../imagenes/compnum-3-entrada2.png) -->
+    ```js
+    let numero2 = parseFloat(prompt("Ingrese el segundo número:"));
+    ```
+
 *   **Propósito**: Se pide al usuario que ingrese el segundo número.
 *   **Detalle**:
     *   `let numero2 = parseFloat(prompt("Ingrese el segundo número:"));`
@@ -52,7 +60,16 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 4️⃣ **Comparación de los Números**
 
-<!-- ![Diagrama de flujo de la estructura condicional para comparar números](../imagenes/compnum-4-comparacion.png) -->
+    ```js
+    if (numero1 > numero2) {
+        console.log(`El número ${numero1} es mayor que ${numero2}.`);
+    } else if (numero1 < numero2) {
+        console.log(`El número ${numero2} es mayor que ${numero1}.`);
+    } else {
+        console.log(`Los números ${numero1} y ${numero2} son iguales.`);
+    }
+    ```
+
 *   **Propósito**: Se utiliza una estructura condicional para comparar `numero1` y `numero2`.
 *   **Detalle**:
     *   `if (numero1 > numero2)`:
@@ -68,7 +85,10 @@ El script sigue una secuencia lógica de cinco pasos principales:
 
 5️⃣ **Visualización del Resultado**
 
-<!-- ![Muestra de la visualización del resultado de la comparación en consola](../imagenes/compnum-5-visualizacion.png) -->
+   ```node
+    El número 2 es mayor que 1.
+   ```
+
 *   **Propósito**: Se muestra en la consola el resultado de la comparación.
 *   **Detalle**:
     *   Dependiendo de la condición que se cumpla en el paso anterior, se utiliza `console.log()` con una plantilla de cadena para imprimir el mensaje adecuado:
@@ -86,7 +106,6 @@ Para ejecutar este script:
 4.  Navega hasta el directorio donde guardaste el archivo.
 5.  Ejecuta el script con el comando:
 
-    <!-- ![Comando de ejecución del script compararNumeros.js en la terminal](../imagenes/compnum-6-ejecucion.png) -->
     ```bash
     node compararNumeros.js
     ```
