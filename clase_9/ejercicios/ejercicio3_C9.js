@@ -11,7 +11,7 @@ let condicion2 = prompt("Introduce el segundo valor booleano (true/false): ").to
 
 console.log(`Combinaciones de las condiciones
     ${condicion1} && ${condicion2} = ${condicion1 && condicion2}
-    ${condicion1} || ${condicion2} = ${condicion1 && condicion2}
+    ${condicion1} || ${condicion2} = ${condicion1 || condicion2}
     !${condicion1} = ${!condicion1}
     !${condicion2} = ${!condicion2}
     !(${condicion1} && ${condicion2}) = ${!(condicion1 && condicion2)}
