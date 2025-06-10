@@ -53,6 +53,8 @@ Crea un programa que solicite al usuario ingresar 5 nombres y los almacene en un
 ### Ejercicio 6: Iguales a 10 pero menores de 1000
 Dada una matriz, recorrer sus valores y sumar solo los números que estén por encima o sean iguales a 10, pero menores que 1000.
 
+![alt text](imagenes/ejercicio6_C12.png)
+
 ### Ejercicio 7: Matriz 5x5
 Declara una variable que contenga una matriz de 5x5 llena de puros números enteros y positivos. Luego, escribe un algoritmo para sumar todos los números en la matriz.
 
@@ -65,6 +67,8 @@ Rojo: 505
 Verde: 505
 
 **IMPORTANTE:** Para hacer este ejercicio, tendrán que investigar sobre el método `push` en los Arrays. ¡Este método lo veremos en las próximas clases, pero si desean pueden investigarlo para resolver este desafío!
+
+![alt text](imagenes/ejercicio8_C12.png)
 
 ### Ejercicio 9: Última aparición de un modelo de auto
 Se está realizando el desarrollo de una aplicación para control de gastos. Cada día, el usuario ingresa sus gastos cotidianos.
