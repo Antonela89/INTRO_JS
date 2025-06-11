@@ -62,12 +62,14 @@ console.log(totalGastosDia(gastos, dia));
 const totalGastosYMax = (matriz) => {
     const totalesPorSemana = []
     let totalMes  = 0;
+    let totalesSemana = [0, 0, 0, 0];
     
     for (let i = 0; i < matriz.length; i++) {
         const semana = matriz[i];
         // Usamos reduce para sumar la semana de forma concisa
         const sumaSemana = semana.reduce((acumulador, gasto) => acumulador + gasto, 0);
         totalesPorSemana.push(sumaSemana);
+        totalesSemana[i] += sumaSemana;
         totalMes += sumaSemana; // Sumamos al total del mes
     }
 
@@ -89,6 +91,8 @@ const totalGastosYMax = (matriz) => {
 
     // 5. Devolver TODOS los resultados en un solo objeto (el return va al final)
     return {
+        totalesSemana,
+        totalesPorDia,
         gastoTotalMes: totalMes,
         semanaConMasGasto: {
             numero: numeroSemanaMax,
