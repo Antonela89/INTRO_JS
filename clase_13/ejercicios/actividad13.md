@@ -1,6 +1,3 @@
-Okay, aquí está el contenido de las imágenes transcrito a formato Markdown:
-
-```markdown
 Curso Introducción a Javascript
 Profesor: Delgado Enrique
 
@@ -63,4 +60,3 @@ Crea una función expresada llamada `calcularFactorial` que reciba un número y 
 **Fórmula del factorial:**
 
 > n! = n × (n − 1) × ... × 1
-```
