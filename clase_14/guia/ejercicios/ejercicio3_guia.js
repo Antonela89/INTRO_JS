@@ -16,4 +16,3 @@ let persona1 = {
 persona1.saludar();
 
 //No funcionan igual. 
-//https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221WUV5ZtgKgkcXaeQi25PPyIlee2AEyuGg%22%5D,%22action%22:%22open%22,%22userId%22:%22106612250880264518974%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing
