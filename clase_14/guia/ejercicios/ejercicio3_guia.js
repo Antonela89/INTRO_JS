@@ -1,18 +1,30 @@
-// Desafío: convertí esta función a flecha. ¿Funciona igual?
-let persona = {
-  nombre: "Ana",
-  saludar: function() {
-    console.log("Hola, soy " + this.nombre);
-  }
-};
+// 🌟 DESAFÍO FINAL: La Máquina de Tareas
 
-persona.saludar(); // Hola, soy Ana
+// Crea una función que reciba una tarea y diga que fue completada:
 
-let persona1 = {
-    nombre: 'Ana',
-    saludar: () => console.log( 'Hola, soy', persona1.nombre)
-};
+// function realizarTarea(tarea) {
+//   console.log("✅ Tarea completada: " + tarea);
+// }
 
-persona1.saludar();
+// realizarTarea("Estudiar funciones");
 
-//No funcionan igual. 
+// Luego convertíla en:
+// - Función expresada
+// - Función flecha
+
+
+function realizarTarea(tarea) {
+  console.log(`✅ Tarea completada: ${tarea}`);
+}
+
+realizarTarea('Estudiar funciones');
+
+const realizarTarea1 = function(tarea) {
+    console.log(`✅ Tarea completada: ${tarea}`);
+}
+
+realizarTarea1('Hacer los ejercicios');
+
+const realizarTarea2 = tarea => console.log(`✅ Tarea completada: ${tarea}`);
+
+realizarTarea2('Subir los cambios a GitHub')
