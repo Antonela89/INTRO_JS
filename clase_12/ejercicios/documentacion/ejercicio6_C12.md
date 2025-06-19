@@ -70,17 +70,14 @@ console.log(`La suma de los números mayores o iguales a 10 y menores a 1000 es:
 ## Salida Esperada en Consola (con la matriz proporcionada)
 
 ```
-La suma de los números mayores o iguales a 10 y menores a 1000 es: 265
+La suma de los números mayores o iguales a 10 y menores a 1000 es: 355
 ```
-*(Elementos que suman: 10 (fila 0), 10 (fila 1), 100 (fila 1), 125 (fila 2), 10 (fila 2), 100 (fila 3) -> 10+10+100+125+10+100 = 355. Corrijo el cálculo manual:
+Elementos que suman: 10 (fila 0), 10 (fila 1), 100 (fila 1), 125 (fila 2), 10 (fila 2), 100 (fila 3) -> 10+10+100+125+10+100 = 355
 Fila 0: 10
 Fila 1: 10, 100
 Fila 2: 125, 10
 Fila 3: 100
 Suma = 10 + 10 + 100 + 125 + 10 + 100 = 355.
-Parece que hay una discrepancia con el resultado esperado en el comentario del código original. La suma correcta de los elementos que cumplen la condición en la matriz dada es 355.)*
-
-**Si la salida esperada es 265, la matriz o la condición deberían ser diferentes. Asumiendo que la lógica del código es la que se debe documentar, la suma es 355.**
 
 🚀 **Ejecución del Script**
 
