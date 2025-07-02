@@ -1,9 +1,3 @@
-Claro, aquí tienes la transcripción del documento a formato Markdown:
-
-```markdown
-Curso Introducción a Javascript
-Profesora: Delgado Enrique
-
 # Actividades Clase Numero 17
 
 ¡Hola, chicas! ✨👩‍💻
